@@ -1,0 +1,74 @@
+<div>
+<label>Tell us about your income </label>
+</div>
+    <label for="earnSalary" class="incomeactivity">Did you earn Salary or wages, Allowances, Director's fees, Employment termination payments
+(Salary and wages includes commissions, bonuses, income from part-time work, parental leave) ?
+</label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.earnSalary" ng-value="true" name = "earnSalary" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.earnSalary" ng-value="false" name = "earnSalary">
+           No
+		    </span>
+	</div>
+<label for="rentalIncome"class="incomeactivity">Did you earn rental income or had rental property available for rent ?</label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.rentalIncome" ng-value="true" name = "rentalIncome" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.rentalIncome" ng-value="false" name = "rentalIncome">
+           No
+		    </span>
+	</div>
+	
+	<label for="interestIncome" class="incomeactivity">Did you earn bank interest income / dividend income ? </label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.interestIncome" ng-value="true" name = "interestIncome" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.interestIncome" ng-value="false" name = "interestIncome">
+           No
+		    </span>
+	</div>
+	<label for="businessIncome" class="incomeactivity">Did you carry on a business as a Sole Trader or receive income from Uber or any other business activity ?</label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.businessIncome" ng-value="true" name = "businessIncome" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.businessIncome" ng-value="false" name = "businessIncome">
+           No
+		    </span>
+	</div>
+	
+		<label for="investmentIncome" class="incomeactivity">Did you sell any of your investments/rental property ? </label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.investmentIncome" ng-value="true" name = "investmentIncome">
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.investmentIncome" ng-value="false" name = "investmentIncome">
+           No
+		    </span>
+	</div>
+	
+	
+
+<div class="form-group row">
+        
+
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.incomeactivity" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>

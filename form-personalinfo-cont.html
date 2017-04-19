@@ -1,0 +1,71 @@
+<label>Fill in your personal details </label>
+<div class="form-group">
+    <label for="sex">Sex</label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.male" value="Male" name = "sex" >
+           Male
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.female" value="Female" name = "sex">
+           Female
+		    </span>
+			</div>
+        
+</div>
+<div class="form-group" ng-init="formData.isMarried = false">
+    <label for="sex">Are you married?</label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.isMarried" ng-value="true" name = "maritalstatus" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.isMarried" ng-value="false" name = "maritalstatus">
+           No
+		    </span>
+			</div>
+        
+</div>
+<div ng-show="formData.isMarried == true">
+<div class="form-group">
+    <label for="title">Your spouse's First Name</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.spouseFirstName">
+</div>
+<div class="form-group">
+    <label for="firstname">Your spouse's Last Name</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.spouseLastName">
+</div>
+<div class="form-group">
+    <label for="isNameChanged">Your spouse's gender</label>
+	<div>
+    <label>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.isSpouseMale" value="Male" name="spouseSex"  >
+           Male
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.isSpouseFemale" value="Female" name="spouseSex" >
+           Female
+		    </span>
+			<span class="noRadio">
+		   <input type="radio" ng-model="formData.isSpouseIndeterminate" value="Indeterminate" name="spouseSex" >
+           Indeterminate
+		    </span>
+        </label>
+		</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3" ng-show="formData.isMarried == true">
+ 
+ <a ui-sref="form.profilespousecont" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+<div class="col-xs-6 col-xs-offset-3" ng-show="formData.isMarried == false"> 
+ <a ui-sref="form.address" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a></div>
+</div>
+</div>

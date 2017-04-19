@@ -1,0 +1,48 @@
+<label>Fill in your personal details </label>
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.title">
+</div>
+<div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.firstname">
+</div>
+<div class="form-group">
+    <label for="familyname">Family Name</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.familyname">
+</div>
+<div class="form-group">
+    <label for="isNameChanged">Has any part of your name changed since completing your last tax return?</label>
+    <label>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.isNameChanged" value="Yes" checked>
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.isNameChanged" value="No">
+           No
+		    </span>
+        </label>
+</div>
+<!--<div class="form-group">
+    <div class="radio">
+        <label>
+           <input type="radio" ng-model="formData.type" value="xbox" checked>
+           I like XBOX
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" ng-model="formData.type" value="ps">
+            I like PS4
+        </label>
+    </div>
+</div>-->
+
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.profilecont" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>

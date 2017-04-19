@@ -1,0 +1,63 @@
+<div>
+<label>Bank Account Details</label>
+</div>
+<div class="form-group">
+    <label for="title">Account Name</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.accountName">
+</div>
+<div class="form-group">
+    <label for="firstname">BSB Number</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.bsbNumber">
+</div>
+<div class="form-group">
+    <label for="firstname">Account Number</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.accountnNumber">
+</div>
+<div class="form-group">
+    <label for="firstname">Name of the bank</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.bankname">
+</div>
+
+<label>Australian Residency Details</label>
+<div class="form-group" ng-init="formData.isResident = true">
+    <label for="sex">Are you an Australian resident?</label>
+    <div>
+           <span class="yesRadio">
+		   <input type="radio" ng-model="formData.isResident" ng-value="true" name = "maritalstatus" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.isResident" ng-value="false" name = "maritalstatus">
+           No
+		    </span>
+			</div>
+        
+</div>
+<div ng-show="formData.isResident == false">
+<datepicker date-format="yyyy-MM-dd" selector="form-control">
+      <label for="email">Date when you became an Australian resident (or arrived in Australia)</label>
+    <input type="text" class="form-control dob" name="" ng-model="formData.email">
+	<span class="fa fa-md fa-calendar calender-icon" style="cursor: pointer">
+        
+        </span>
+</datepicker>
+<label for="sex">Is this your final return?</label>
+<div>
+   <span class="yesRadio">
+		   <input type="radio" ng-model="formData.isFinalReturn" ng-value="true" name = "isFinalReturn" >
+           Yes
+		   </span>
+		    <span class="noRadio">
+		   <input type="radio" ng-model="formData.isFinalReturn" ng-value="false" name = "isFinalReturn">
+           No
+   </span>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.incomeactivity" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>
